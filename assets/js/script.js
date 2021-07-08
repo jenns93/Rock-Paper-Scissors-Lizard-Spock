@@ -1,12 +1,4 @@
 var myArray = ["Rock","Paper","Scissors","Lizard","Spock"];
-
-function incrementScore(){
-    if(result.innerHTML ==="you win"){++wins.innerHTML, ++score.innerHTML}
-    else if (result.innerHTML ==="you lose"){++loses.innerHTML}
-    else {alert="error"}
-  
-  }
-  
 function spock(){
     let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
     let spock = document.getElementById("user");
@@ -18,4 +10,19 @@ function spock(){
     else if (computer === myArray[3]) { result.innerHTML= "you lose"; }
     else  { result.innerHTML= "draw"; }
     incrementScore(); 
+    levelUp()
 }  
+
+function incrementScore(){
+    if(result.innerHTML ==="you win"){++wins.innerHTML, ++score.innerHTML}
+    else if (result.innerHTML ==="you lose"){++loses.innerHTML}
+    else {alert="error"}
+  }
+  function levelUp(){
+    let level = document.getElementById("level-number")
+    let winCheck = document.getElementById("wins").innerHTML;
+    if(winCheck === "3"){++level.innerHTML
+    document.getElementById("wins").innerHTML=0;
+    document.getElementById("loses").innerHTML=0;
+    } 
+  }
