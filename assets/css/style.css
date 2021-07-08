@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Tourney:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 body{
   font-family: tourney, sans-serif;
   background: url("../images/game-background.jpg")center center / cover no-repeat black;
   color: rgb(199, 30, 241);
+}
+#game{
+  height: 300px;
+  text-align: center;
+}
+#left-console{
+  padding: 20px 0;
+  width: 33%;
+  height: 80%;
+  float: left;
+}
+#right-console{
+  padding-top: 30px;
+  width: 33%;
+  height: 80%;
+  float: right;
+}
+#center-console{
+  width: 33%;
+  height: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
 }
