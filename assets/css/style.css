@@ -14,7 +14,7 @@ body{
   text-align: center;
 }
 #left-console{
-  padding: 20px 0;
+  padding-top: 30px;
   width: 33%;
   height: 80%;
   float: left;
@@ -30,6 +30,28 @@ body{
   height: 80%;
   margin: 0 auto;
   padding-top: 30px;
+}
+#center-console div{
+  height: 33.3%;
+  line-height: 75px;
+  font-size: 3rem;
+}
+#wins, #loses{
+  height: 25%;
+  line-height: 60px;
+  font-size: 1rem;
+}
+#score{
+  height: 50%;
+  line-height: 120px;
+  font-size: 2rem;
+}
+.level{
+  height: 100%;
+  line-height: 50px;
+}
+#level-number{
+  font-size: 5rem;
 }
 .controls{
   height: 200px;
