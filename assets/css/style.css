@@ -70,7 +70,7 @@ nav a{
 .controls{
   height: 200px;
 }
-.user{
+#rock, #paper, #scissors, #lizard, #spock{
   height: 50%;
   width: 15%;
   margin: 50px 0 50px 4%;
@@ -80,7 +80,7 @@ nav a{
   font-size: 2rem;
   font-family:  tourney, sans-serif;
 }
-.user:hover, nav a:hover, .start-game:hover{
+#rock:hover, #paper:hover, #scissors:hover, #lizard:hover, #spock:hover, nav a:hover, .start-game:hover{
   background-color: rgba(230, 83, 149, 0.38);
 }
 .menu{
