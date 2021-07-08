@@ -26,3 +26,12 @@ function incrementScore(){
     document.getElementById("loses").innerHTML=0;
     } 
   }
+    function reset(){
+        document.getElementById('computer').innerHTML="Computer";
+        document.getElementById('result').innerHTML="Vs"; 
+        document.getElementById('user').innerHTML="You";
+        document.getElementById('wins').innerHTML="0";
+        document.getElementById('loses').innerHTML="0";
+        document.getElementById('score').innerHTML="0";
+      }
+    
