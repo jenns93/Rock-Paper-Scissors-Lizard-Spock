@@ -99,9 +99,10 @@ function incrementScore(){
         document.getElementById("lizard").disabled = false;
         document.getElementById("spock").disabled = false;
       }
+      
       function gameOver(){
         let loseCheck = document.getElementById("loses").innerHTML;
-        let playAgain = document.getElementById("play-again")
+        let playAgain = document.getElementById("play-again");
         if (loseCheck >3){
           document.getElementById('computer').innerHTML="GAME OVER";
           document.getElementById('result').innerHTML="SCORE"; 
@@ -115,7 +116,7 @@ function incrementScore(){
         }
       }
       function rules(){
-        let intructions = document.getElementById('rule-list');
+        let intructions = document.getElementById("rule-list");
         intructions.innerHTML = `<h4>How to play</h4>
              <p>Scissors decapitate Scissors cuts paper,<br>
               paper covers rock, rock crushes lizard,<br>
@@ -123,6 +124,7 @@ function incrementScore(){
                scissors decapitates lizard, lizard eats paper,<br> 
               paper disproves Spock, Spock vaporizes rock,<br>
                and as it always has, rock crushes scissors.
-             </p>`;
+             </p>
+             <button id="close" onclick="close()">CLOSE</button>`;
      }
-     
+    

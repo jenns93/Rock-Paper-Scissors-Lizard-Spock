@@ -90,7 +90,7 @@ nav a{
   font-size: 2rem;
   font-family:  tourney, sans-serif;
 }
-#rock:hover, #paper:hover, #scissors:hover, #lizard:hover, #spock:hover, nav a:hover, .start-game:hover, #rules:hover{
+#rock:hover, #paper:hover, #scissors:hover, #lizard:hover, #spock:hover, nav a:hover, .start-game:hover, #rules:hover, #close:hover{
   background-color: rgba(230, 83, 149, 0.38);
 }
 .menu{
@@ -128,4 +128,12 @@ nav a{
   font-size: 1.5rem;
   line-height: 30px;
   color: #14e91f;
+}
+#close{
+  font-size: 1.5rem;
+  color: rgb(204, 194, 57);
+  font-family: tourney, sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: transparent;
 }
