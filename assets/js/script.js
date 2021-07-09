@@ -10,7 +10,8 @@ function spock(){
     else if (computer === myArray[3]) { result.innerHTML= "you lose"; }
     else  { result.innerHTML= "draw"; }
     incrementScore(); 
-    levelUp()
+    levelUp();
+    gameOver();
 }  
 
 function incrementScore(){
@@ -33,5 +34,11 @@ function incrementScore(){
         document.getElementById('wins').innerHTML="0";
         document.getElementById('loses').innerHTML="0";
         document.getElementById('score').innerHTML="0";
+        document.getElementById('level-number').innerHTML="1";
       }
-    
+      function gameOver(){
+        let loseCheck = document.getElementById("loses").innerHTML;
+        if (loseCheck >3){
+            reset();
+        }
+      }
