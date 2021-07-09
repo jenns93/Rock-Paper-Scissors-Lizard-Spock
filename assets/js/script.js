@@ -78,7 +78,10 @@ function incrementScore(){
   function levelUp(){
     let level = document.getElementById("level-number")
     let winCheck = document.getElementById("wins").innerHTML;
-    if(winCheck === "3"){++level.innerHTML
+    let winCondition = 3;
+    if(parseInt(winCheck) === winCondition){++level.innerHTML
+     if(winCondition< 7) ++winCondition;
+      console.log(winCondition);
     document.getElementById("wins").innerHTML=0;
     document.getElementById("loses").innerHTML=0;
     } 
