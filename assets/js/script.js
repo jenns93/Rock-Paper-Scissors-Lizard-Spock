@@ -42,3 +42,12 @@ function incrementScore(){
             reset();
         }
       }
+      function rules(){
+        let intructions = document.getElementById('rule-list');
+        intructions.innerHTML = `<h4>How to play</h4>
+             <p>Scissors decapitate Scissors cuts paper, paper covers rock, rock crushes lizard,
+              lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, 
+              paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.
+             </p>`;
+     }
+     
