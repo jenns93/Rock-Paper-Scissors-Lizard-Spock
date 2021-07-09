@@ -60,6 +60,16 @@ nav a{
   line-height: 120px;
   font-size: 2rem;
 }
+#play-again{
+  background-color: transparent;
+  font-family: tourney, sans-serif;
+  font-size: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(204, 194, 57);
+  display: none;
+  margin-left: 20%;
+}
 .level{
   height: 100%;
   line-height: 50px;

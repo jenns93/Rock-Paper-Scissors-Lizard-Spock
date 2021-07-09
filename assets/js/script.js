@@ -84,6 +84,7 @@ function incrementScore(){
     } 
   }
     function reset(){
+      let playAgain = document.getElementById("play-again")
         document.getElementById('computer').innerHTML="Computer";
         document.getElementById('result').innerHTML="Vs"; 
         document.getElementById('user').innerHTML="You";
@@ -91,13 +92,16 @@ function incrementScore(){
         document.getElementById('loses').innerHTML="0";
         document.getElementById('score').innerHTML="0";
         document.getElementById('level-number').innerHTML="1";
+        playAgain.style.display = "none";
       }
       function gameOver(){
         let loseCheck = document.getElementById("loses").innerHTML;
+        let playAgain = document.getElementById("play-again")
         if (loseCheck >3){
           document.getElementById('computer').innerHTML="GAME OVER";
           document.getElementById('result').innerHTML="SCORE"; 
           document.getElementById('user').innerHTML=score.innerHTML;
+          playAgain.style.display = "block";
         }
       }
       function rules(){
