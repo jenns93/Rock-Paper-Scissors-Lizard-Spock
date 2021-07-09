@@ -1,5 +1,60 @@
 var myArray = ["Rock","Paper","Scissors","Lizard","Spock"];
-
+function rock(){
+    let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
+    let rock = document.getElementById("user");
+    rock.innerHTML = document.getElementById("rock").innerHTML;
+    let result = document.getElementById("result");
+    if (computer === myArray[0]) { result.innerHTML= "Draw"; }
+    else if (computer === myArray[1]) { result.innerHTML= "you lose"; }
+    else if (computer === myArray[2]) { result.innerHTML= "you win"; }
+    else if (computer === myArray[3]) { result.innerHTML= "you win"; }
+    else  { result.innerHTML= "you lose"; }
+    incrementScore(); 
+    levelUp();
+    gameOver();
+}  
+function paper(){
+    let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
+    let paper = document.getElementById("user");
+    paper.innerHTML = document.getElementById("paper").innerHTML;
+    let result = document.getElementById("result");
+    if (computer === myArray[0]) { result.innerHTML= "you win"; }
+    else if (computer === myArray[1]) { result.innerHTML= "Draw"; }
+    else if (computer === myArray[2]) { result.innerHTML= "you lose"; }
+    else if (computer === myArray[3]) { result.innerHTML= "you lose"; }
+    else  { result.innerHTML= "you win"; }
+    incrementScore(); 
+    levelUp();
+    gameOver();
+}  
+function scissors(){
+    let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
+    let scissors = document.getElementById("user");
+    scissors.innerHTML = document.getElementById("scissors").innerHTML;
+    let result = document.getElementById("result");
+    if (computer === myArray[0]) { result.innerHTML= "you lose"; }
+    else if (computer === myArray[1]) { result.innerHTML= "you win"; }
+    else if (computer === myArray[2]) { result.innerHTML= "Draw"; }
+    else if (computer === myArray[3]) { result.innerHTML= "you win"; }
+    else  { result.innerHTML= "you lose"; }
+    incrementScore(); 
+    levelUp();
+    gameOver();
+}  
+function lizard(){
+    let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
+    let lizard = document.getElementById("user");
+    lizard.innerHTML = document.getElementById("lizard").innerHTML;
+    let result = document.getElementById("result");
+    if (computer === myArray[0]) { result.innerHTML= "you lose"; }
+    else if (computer === myArray[1]) { result.innerHTML= "you win"; }
+    else if (computer === myArray[2]) { result.innerHTML= "you lose"; }
+    else if (computer === myArray[3]) { result.innerHTML= "Draw"; }
+    else  { result.innerHTML= "you win"; }
+    incrementScore(); 
+    levelUp();
+    gameOver();
+}  
 function spock(){
     let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
     let spock = document.getElementById("user");
@@ -9,7 +64,7 @@ function spock(){
     else if (computer === myArray[1]) { result.innerHTML= "you lose"; }
     else if (computer === myArray[2]) { result.innerHTML= "you win"; }
     else if (computer === myArray[3]) { result.innerHTML= "you lose"; }
-    else  { result.innerHTML= "draw"; }
+    else  { result.innerHTML= "Draw"; }
     incrementScore(); 
     levelUp();
     gameOver();
@@ -40,7 +95,9 @@ function incrementScore(){
       function gameOver(){
         let loseCheck = document.getElementById("loses").innerHTML;
         if (loseCheck >3){
-            reset();
+          document.getElementById('computer').innerHTML="GAME OVER";
+          document.getElementById('result').innerHTML="SCORE"; 
+          document.getElementById('user').innerHTML=score.innerHTML;
         }
       }
       function rules(){
