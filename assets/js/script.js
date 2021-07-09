@@ -1,4 +1,5 @@
 var myArray = ["Rock","Paper","Scissors","Lizard","Spock"];
+
 function spock(){
     let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random()*myArray.length)];
     let spock = document.getElementById("user");
