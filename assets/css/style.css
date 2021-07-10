@@ -32,12 +32,14 @@ nav a{
   width: 33%;
   height: 80%;
   float: left;
+  text-shadow:1px 1px rgb(207, 205, 41);
 }
 #right-console{
   padding-top: 30px;
   width: 33%;
   height: 80%;
   float: right;
+  text-shadow:1px 1px rgb(207, 205, 41);
 }
 #center-console{
   width: 33%;
@@ -136,4 +138,13 @@ nav a{
   border-radius: 10px;
   cursor: pointer;
   background-color: transparent;
+}
+@media screen and (max-width: 1000px){
+  .controls{
+    height: 10px;
+  }
+  .controls button{
+    display: block;
+    margin: 0 100px;
+  }
 }
