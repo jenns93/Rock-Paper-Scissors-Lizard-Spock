@@ -47,10 +47,11 @@ nav a{
   margin: 0 auto;
   padding-top: 30px;
 }
-#center-console div{
+#center-console div, #center-console button{
   height: 33.3%;
   line-height: 75px;
   font-size: 3rem;
+  font-family: tourney, sans-serif;
 }
 #wins, #loses{
   height: 25%;
@@ -64,13 +65,10 @@ nav a{
 }
 #play-again{
   background-color: transparent;
-  font-family: tourney, sans-serif;
   font-size: 3rem;
   border-radius: 10px;
   cursor: pointer;
   color: rgb(204, 194, 57);
-  display: block;
-  margin-left: 20%;
 }
 .level{
   height: 100%;
@@ -81,6 +79,8 @@ nav a{
 }
 #controls{
   height: 200px;
+  width: 100%;
+  text-align: center;
 }
 #controls button:disabled{
   color: rgb(204, 194, 57, 0.4);
@@ -108,21 +108,21 @@ nav a{
   height: 400px;
   text-align: center;
   margin-top: 50px;
+  width: 100%;
 }
 .start-game{
   font-size: 3rem;
   height: 50px;
-  width: 25%;
-  margin-left: 37%;
+  width: 50%;
+  margin-left: 25%;
   padding:20px;
   display: block;
   color: rgb(204, 194, 57);
   border-radius: 10px;
 }
 #rules{
-  margin-top: 30px;
   height:60px;
-  width: 100px;
+  width: 20%;
   font-size: 2rem;
   color: rgb(204, 194, 57);
   font-family: tourney, sans-serif;
@@ -132,9 +132,9 @@ nav a{
 }
 #rule-list{
   height: 150px;
-  width: 60%;
-  margin-left: 18%;
   margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
   padding:10px;
   border-radius: 10px;
   font-family: source sans pro;
@@ -145,11 +145,25 @@ nav a{
   visibility: hidden;
 }
 @media screen and (max-width: 1000px){
-  #controls{
-    height: 10px;
+  #center-console{
+    height: 60%;
+    width: 60%;
+  }
+  #left-console, #right-console{
+    height: 60%;
+    width: 20%;
   }
   #controls button{
-    display: block;
-    margin: 0 100px;
+    margin: 0;
+    width: 19%;
+    height: 25%;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  nav{
+    margin-top: 20px;
+  }
+  #rule-list{
+    height: 200px;
   }
 }
