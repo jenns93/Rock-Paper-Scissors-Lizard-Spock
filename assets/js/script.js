@@ -169,15 +169,6 @@ function gameOver() {
 }
 
 function rules() {
-    let intructions = document.getElementById("rule-list");
-    intructions.innerHTML = `<h4>How to play</h4>
-             <p>Scissors decapitate Scissors cuts paper,
-              paper covers rock, rock crushes lizard,
-              lizard poisons Spock, Spock smashes scissors,
-               scissors decapitates lizard, lizard eats paper, 
-              paper disproves Spock, Spock vaporizes rock,
-               and as it always has, rock crushes scissors.
-             </p>
-             <h4>Score 3 wins to level up, but be careful 10 loses and it's GAME OVER!</h4>
-             <button id="close" onclick="close()">CLOSE</button>`;
+    let instructions = document.getElementById("rule-list");
+    instructions.style.visibility = "visible";
 }
