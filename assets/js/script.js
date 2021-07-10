@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    disableButtons();
+  });
+  function disableButtons(){
+    document.getElementById("rock").disabled = true;
+        document.getElementById("paper").disabled = true;
+        document.getElementById("scissors").disabled = true;
+        document.getElementById("lizard").disabled = true;
+        document.getElementById("spock").disabled = true;
+  }
+  function activateButtons(){
+    document.getElementById("rock").disabled = false;
+        document.getElementById("paper").disabled = false;
+        document.getElementById("scissors").disabled = false;
+        document.getElementById("lizard").disabled = false;
+        document.getElementById("spock").disabled = false;
+  }
 var myArray = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 
 function rock() {
@@ -138,13 +155,8 @@ function reset() {
     document.getElementById('score').innerHTML = "0";
     document.getElementById('level-number').innerHTML = "1";
     playAgain.style.display = "none";
-    document.getElementById("rock").disabled = false;
-    document.getElementById("paper").disabled = false;
-    document.getElementById("scissors").disabled = false;
-    document.getElementById("lizard").disabled = false;
-    document.getElementById("spock").disabled = false;
+    activateButtons();
 }
-
 function gameOver() {
     let loseCheck = document.getElementById("loses").innerHTML;
     let playAgain = document.getElementById("play-again");
@@ -152,12 +164,9 @@ function gameOver() {
         document.getElementById('computer').innerHTML = "GAME OVER";
         document.getElementById('result').innerHTML = "SCORE";
         document.getElementById('user').innerHTML = score.innerHTML;
+        document.getElementById("play-again").innerHTML = "Play Again";
         playAgain.style.display = "block";
-        document.getElementById("rock").disabled = true;
-        document.getElementById("paper").disabled = true;
-        document.getElementById("scissors").disabled = true;
-        document.getElementById("lizard").disabled = true;
-        document.getElementById("spock").disabled = true;
+        disableButtons();
     }
 }
 

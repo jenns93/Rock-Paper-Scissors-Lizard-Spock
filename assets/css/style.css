@@ -69,7 +69,7 @@ nav a{
   border-radius: 10px;
   cursor: pointer;
   color: rgb(204, 194, 57);
-  display: none;
+  display: block;
   margin-left: 20%;
 }
 .level{
