@@ -88,6 +88,7 @@ nav a{
 }
 #controls button:disabled:hover{
   background-color: transparent;
+  cursor:auto;
 }
 #controls button{
   height: 50%;
@@ -98,6 +99,7 @@ nav a{
   color: rgb(204, 194, 57);
   font-size: 2rem;
   font-family:  tourney, sans-serif;
+  cursor: pointer;
 }
 #controls button:hover, nav a:hover, .start-game:hover, #rules:hover, #close:hover{
   background-color: rgba(230, 83, 149, 0.38);
