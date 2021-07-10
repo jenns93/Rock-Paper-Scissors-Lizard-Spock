@@ -133,15 +133,13 @@ function incrementScore() {
 }
 
 function levelUp() {
-    let level = document.getElementById("level-number")
-    let winCheck = document.getElementById("wins").innerHTML;
+    let level = document.getElementById("level-number");
+    let winCheck = document.getElementById("wins");
     let winCondition = 3;
-    if (parseInt(winCheck) === winCondition) {
-        ++level.innerHTML
-        if (winCondition < 7) ++winCondition;
+    if (parseInt(winCheck.innerHTML) === winCondition) {
+        ++level.innerHTML;
         console.log(winCondition);
         document.getElementById("wins").innerHTML = 0;
-        document.getElementById("loses").innerHTML = 0;
     }
 }
 
@@ -158,9 +156,9 @@ function reset() {
     activateButtons();
 }
 function gameOver() {
-    let loseCheck = document.getElementById("loses").innerHTML;
+    let loseCheck = document.getElementById("loses");
     let playAgain = document.getElementById("play-again");
-    if (loseCheck > 3) {
+    if(loseCheck.innerHTML >9){
         document.getElementById('computer').innerHTML = "GAME OVER";
         document.getElementById('result').innerHTML = "SCORE";
         document.getElementById('user').innerHTML = score.innerHTML;
