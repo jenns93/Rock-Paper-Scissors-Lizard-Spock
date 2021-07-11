@@ -8,6 +8,7 @@ body{
   font-family: tourney, sans-serif;
   background: url("../images/game-background.jpg")center center / cover no-repeat black;
   color: rgb(199, 30, 241);
+  height: 100%;
 }
 h1{
   text-align: center;
@@ -135,6 +136,17 @@ nav a{
   color: rgb(204, 194, 57);
   background-color:  rgba(230, 83, 149, 0.38);
   visibility: hidden;
+}
+@media screen and (min-width: 1500px){
+  #game{
+    height:800px;
+  }
+  h1, nav a, #center-console div, #center-console button,  #left-console div, #right-console h2, #right-console h3, #right-console div, #controls button{
+    font-size: 4rem;
+  }
+  #left-console h3{
+    padding-top: 50px;
+  }
 }
 @media screen and (max-width: 1000px){
   #center-console{
