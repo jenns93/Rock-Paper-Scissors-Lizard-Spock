@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("lizard").disabled = false;
         document.getElementById("spock").disabled = false;
   }
-var myArray = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+var myArray = ["ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK"];
 
 function rock() {
     let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];

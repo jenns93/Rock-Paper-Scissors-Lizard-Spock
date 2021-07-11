@@ -167,3 +167,63 @@ nav a{
     height: 200px;
   }
 }
+@media screen and (max-width: 750px){
+  #game{
+    height:180px;
+  }
+  .heading{
+    font-size: 1.5rem;
+  }
+  #center-console, #center-console button, #left-console, #right-console, #controls button{
+    display: block;
+    width: 100%;
+  }
+  #center-console{
+    height: 40%;
+    padding-top: 0;
+  }
+  #center-console div{
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 30%;
+  }
+  #center-console button{
+    height: 10%;
+    font-size: 2rem;
+  }
+  #computer{
+    float: left;
+  }
+  #user{
+    float: right;
+  }
+  #left-console, #right-console{
+    height: 20%;
+    padding-top: 0;
+  }
+  #right-console div, #right-console h2, #right-console h3, .level h2, .level h3{
+    display: inline-block;
+    padding: 0;
+    line-height: 40px;
+    width: 15%;
+    font-size: 1.5rem;
+  }
+  #level-number{
+    font-size: 2rem;
+  }
+ .start-game{
+   width: 60%;
+   margin: 0 20%;
+ }
+  #rule-list{
+    height: 300px;
+  }
+  #controls{
+    height: 100%;
+  }
+  #controls button{
+    text-align: center;
+    line-height: 35px;
+  }
+  
+}
