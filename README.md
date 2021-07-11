@@ -1,102 +1,117 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissors Lizard Spock
+![]()
+[Live Website](https://jenns93.github.io/Roc-Paper-Scissors-Lizard-Spock/)
+[Github Repository]()
+ # About
+This website has been created for those looking to play the enhanced version of the timeless classic game of rock, paper, scissors. 
 
-Welcome jenns93,
+## Table of Contents
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+- [User Experience UX](#User-Experience-UX)
+- [Design](#Design)
 
-## Gitpod Reminders
+- [Features](#Features)
+- [Specific to Pages](#Specific-to-Pages)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [Technologies Used](#Technologies-Used)
 
-`python3 -m http.server`
+- [Testing](#Testing)
 
-A blue button should appear to click: _Make Public_,
+- [Deployment](#Deployment)
 
-Another blue button should appear to click: _Open Browser_.
+- [Bugs](#Bugs)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- [Credits](#Credits)
 
-A blue button should appear to click: _Make Public_,
+## User Experience UX
+### User Stories
+i. As a visitor, I am looking to play a fun and engaging game of rock, paper, scissors, lizard, spock.
+1. I want the layout of the site to be simple to navigate through.
+2. I want the website to have an eye catching and fun design.
+3. I want to be able to track my score as I play.
+4. I want to be able to see what game button I selected.
 
-Another blue button should appear to click: _Open Browser_.
+i. As a visitor who is on the move
+1. I want to be able to view the content on all my devices.
+2. I want to the site to be layed out well on smaller sceens so I can play just as easily on my phone.
+3. I want a level structure to be present.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+i.As a visitor who has never played this version of the game.
+1.I want to be able to go back from the game to read the rules.
+2.I want the site to tell me if I have won or lost.
+3.I want the game to have a retro/arcade design.
 
-To log into the Heroku toolbelt CLI:
+## Design
+### Colour scheme
+- This website has be design to be bold and bright with neon type colours such as (#)and(#) against a dark backgound to give the impression of the classic arcade games of the 1970's.
+### Typography
+- The main text font on the site is Tourney which enhances the retro design, this has been paired with Source san pro for text heavy areas such as the rule list. Some parts of the game text have the add style of text shaddow which helps to draw the users eye to important data whithin the game and improve readibility.
+### Imagery
+- The images used on the website have been selected to provide enhance the contrast between the background and the text. Also the imagery of space goes hand in hand with promoting the idea of a classic arcade design.
+### Wireframes
+- The wireframes were created using Mockplus, theses wireframes were losely followed, slight tweaks have been made for more sutible usability on different screen sizes. Also, the addition of a hidden rule list which has to be clicked to open was added during development as a way for the indez page to appear cleaner and less cluttered.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![]()
+- [Wireframes]()
+## Features
+### Header
+- The heading of the sites index page reads the title with icons incorperated into the design.
+### Navbar
+- The home link on the nav bar displays a hover function with a coloured background on the game page that will return the user to the index page. A similar link is provided on the index page with the same functions to allow the user to enter the game page.
+- For small screen sizes (mobile) the navigation elements of the site shrink the fit the space avalible.
+### Buttons
+- All buttons have a hover function which enables a background colour.
+- Game buttons are dimmed in colour when they are univalible to use, to help the user experience.
+### Hero image
+- 
+### Accessibility
+- Titles for each webpage are provided.
+- Bright colors and simple design provided to achive better readibility when playing the game.
+- Labels for buttons provided for screen readers.
+### Responsiveness
+- All site pages respond with the same functionality for all screen sizes.
+### Footer
+-
+## Specific to Pages
+### Home
+- Home page provides a large link to the game page.
+- Expanable rules button which provides win and loss criteria for the game.
+### Game
+- Main content pages are all structured in the same retro style with consitant colour throughout.
+- To begin game a "start game" button is provied along with description of output areas where "user / computer" outputs will be displayed on screen.
+- Win / Lose / Draw out puts are displayed as the user plays through the game.
+- A level counter is displayed and reactes to the users score along with the win / lose counters and a total score counter.
+- When the lose criteria is met the game is stopped and the user is informed that it is "game over" and is given thier final score.
+- When "game over" is initiated the user out put buttions are dimmed to show they are deactivated. Also a "play again" button is displayed to allow the user to try again.
+### Future Features
+- High score table to encourage users to attempt to beat their previous score.
+- The addition of different game modes for example a time trial, where the user is under time pressure to select an answer.
+- Addition of annimation to enhance user enjoyment.    
+## Technologies Used
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Languages Used
 
-------
+- HTML5
 
-## Release History
+- CSS3
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- JavaScript
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Frameworks, libraries and programs used
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+-[Mockplus](https://www.mockplus.com/) Mockplus was used to create the wireframe designs for the site on three screen sizes desktop, tablet and mobile.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+-[Font-Awesome](https://fontawesome.com/) Font Awesome was used to provide icons for additional styling to heading.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+-[Google-Fonts](https://fonts.google.com/) Google Fonts was used to import Tourney & Source san pro into the style.css stylesheet
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-[Github](https://github.com/) Github is used to .... the files and publish the finished website.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+-[Gitpod](https://www.gitpod.io/) Gitpod was used to code the website and committed changes throughout the development to Github.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+-[Pexels](https://www.pexels.com/) Pexels was used to source stock photos to be used to enhance the design of the site.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Testing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Functionality Testing
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
