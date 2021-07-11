@@ -137,6 +137,12 @@ nav a{
   background-color:  rgba(230, 83, 149, 0.38);
   visibility: hidden;
 }
+.error{
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 2rem;
+}
 @media screen and (min-width: 1500px){
   #game{
     height:800px;
