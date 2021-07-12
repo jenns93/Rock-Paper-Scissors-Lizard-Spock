@@ -131,8 +131,13 @@ function incrementScore() {
     let loses = document.getElementById("loses");
 	if (result.innerHTML === "Win") {
 		++wins.innerHTML; ++score.innerHTML;
+		result.style.color = "#1a9e00";
 	} else if (result.innerHTML === "Lose") {
 		++loses.innerHTML;
+		result.style.color = "#dd2214";
+	} else if (result.innerHTML === "Draw") {
+		++loses.innerHTML;
+		result.style.color = "rgb(199, 30, 241)";
 	}
 }
 

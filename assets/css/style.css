@@ -47,6 +47,10 @@ nav a{
   font-size: 3rem;
   font-family: tourney, sans-serif;
 }
+#user{
+  color: rgb(204, 194, 57);
+  text-shadow:1px 1px rgb(199, 30, 241);
+}
 #wins, #loses{
   height: 25%;
   line-height: 60px;
