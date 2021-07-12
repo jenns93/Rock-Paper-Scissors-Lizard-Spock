@@ -17,7 +17,7 @@ function activateButtons() {
 	document.getElementById("lizard").disabled = false;
 	document.getElementById("spock").disabled = false;
 }
-var myArray = ["ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK"];
+var myArray = ['<i class="fas fa-hand-rock"></i>', '<i class="fas fa-hand-paper"></i>', '<i class="fas fa-hand-scissors"></i>', '<i class="fas fa-hand-lizard"></i>', '<i class="fas fa-hand-spock"></i>'];
 
 function rock() {
 	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
@@ -137,7 +137,7 @@ function incrementScore() {
 		result.style.color = "#dd2214";
 	} else if (result.innerHTML === "Draw") {
 		result.style.color = "rgb(199, 30, 241)";
-	}
+	} 
 }
 
 function levelUp() {
@@ -148,7 +148,7 @@ function levelUp() {
 		++level.innerHTML;
 		console.log(winCondition);
 		document.getElementById("wins").innerHTML = 0;
-	}
+	} 
 }
 
 function reset() {
@@ -175,7 +175,7 @@ function gameOver() {
 		document.getElementById("play-again").innerHTML = "Play Again";
 		playAgain.style.display = "block";
 		disableButtons();
-	}
+	} 
 }
 
 function rules() {

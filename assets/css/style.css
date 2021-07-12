@@ -67,6 +67,7 @@ nav a{
   border-radius: 10px;
   cursor: pointer;
   color: rgb(204, 194, 57);
+  width: 100%;
 }
 .level{
   height: 100%;
@@ -98,7 +99,7 @@ nav a{
   font-family:  tourney, sans-serif;
   cursor: pointer;
 }
-#controls button:hover, nav a:hover, .start-game:hover, #rules:hover, #close:hover{
+#controls button:hover, nav a:hover, .start-game:hover, #rules:hover, #close:hover, #play-again:hover{
   background-color: rgba(230, 83, 149, 0.38);
 }
 .menu{
