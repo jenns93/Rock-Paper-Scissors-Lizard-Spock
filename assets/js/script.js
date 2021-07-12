@@ -133,10 +133,9 @@ function incrementScore() {
 		++wins.innerHTML; ++score.innerHTML;
 		result.style.color = "#1a9e00";
 	} else if (result.innerHTML === "Lose") {
-		++loses.innerHTML;
+		--loses.innerHTML;
 		result.style.color = "#dd2214";
 	} else if (result.innerHTML === "Draw") {
-		++loses.innerHTML;
 		result.style.color = "rgb(199, 30, 241)";
 	}
 }
@@ -158,7 +157,7 @@ function reset() {
 	document.getElementById('result').innerHTML = "Vs";
 	document.getElementById('user').innerHTML = "YOU";
 	document.getElementById('wins').innerHTML = "0";
-	document.getElementById('loses').innerHTML = "0";
+	document.getElementById('loses').innerHTML = "10";
 	document.getElementById('score').innerHTML = "0";
 	document.getElementById('level-number').innerHTML = "1";
 	playAgain.style.display = "none";
@@ -169,7 +168,7 @@ function gameOver() {
 	let loseCheck = document.getElementById("loses");
 	let playAgain = document.getElementById("play-again");
 	let score = document.getElementById("score");
-	if (loseCheck.innerHTML > 9) {
+	if (loseCheck.innerHTML < 1) {
 		document.getElementById('computer').innerHTML = "GAME OVER";
 		document.getElementById('result').innerHTML = "SCORE";
 		document.getElementById('user').innerHTML = score.innerHTML;
