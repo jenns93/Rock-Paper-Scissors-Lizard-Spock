@@ -54,7 +54,7 @@ nav a{
 #wins, #loses{
   height: 25%;
   line-height: 60px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 #score{
   height: 50%;
@@ -213,7 +213,6 @@ nav a{
   #center-console div{
     display: inline-block;
     font-size: 1.5rem;
-    width: 30%;
   }
   #center-console button{
     height: 10%;
@@ -221,9 +220,14 @@ nav a{
   }
   #computer{
     float: left;
+    width: 40%;
   }
   #user{
     float: right;
+    width: 40%;
+  }
+  #result{
+    width: 20%;
   }
   #left-console, #right-console{
     height: 20%;
@@ -245,6 +249,7 @@ nav a{
  }
   #rule-list{
     height: 300px;
+    line-height: 30px;
   }
   #controls{
     height: 100%;
@@ -255,22 +260,23 @@ nav a{
   }
 }
 @media screen and (max-width: 500px){
-  .start-game{
+  .start-game, #rule-list{
     width:80%;
-    margin-left: 5%;
+    margin-left: 10%;
   }
   #rules{
     width: 60%;
+    margin-left: 20%;
   }
   #rule-list{
-    width:75%;
     font-size: 1rem;
-    height: 350px;
+    height: 300px;
+    line-height: 20px;
   }
   #right-console h2, #right-console h3{
     font-size: 1.2rem;
   }
   #center-console div{
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
