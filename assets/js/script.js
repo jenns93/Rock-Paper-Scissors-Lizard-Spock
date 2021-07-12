@@ -179,6 +179,8 @@ function gameOver() {
 }
 
 function rules() {
-	let instructions = document.getElementById("rule-list");
-	instructions.style.visibility = "visible";
+	let ruleList = document.getElementById("rule-list");
+	let rules = document.getElementById("rules");
+	ruleList.style.visibility = "visible";
+	rules.style.backgroundColor = "rgba(230, 83, 149, 0.38)";
 }
