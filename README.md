@@ -1,6 +1,6 @@
 # Rock Paper Scissors Lizard Spock
 - ![Multi devive mockup](assets/images/mockup-multi-device.png)
-- [Live Website](https://jenns93.github.io/Roc-Paper-Scissors-Lizard-Spock/)
+- [Live Website](https://jenns93.github.io/Rock-Paper-Scissors-Lizard-Spock/)
 - [Github Repository](https://github.com/jenns93/Rock-Paper-Scissors-Lizard-Spock)
  # About
 This website has been created for those looking to play the enhanced version of the timeless classic game of rock, paper, scissors. The game is a pure game of chance and is easy to grasp. For those who need further information rules are provided in the index page.
