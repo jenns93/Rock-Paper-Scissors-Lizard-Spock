@@ -1,7 +1,7 @@
 # Rock Paper Scissors Lizard Spock
-![Multi devive mockup](/workspace/Rock-Paper-Scissors-Lizard-Spock/assets/images/mockup-multi-device.png)
-[Live Website](https://jenns93.github.io/Roc-Paper-Scissors-Lizard-Spock/)
-[Github Repository](https://github.com/jenns93/Rock-Paper-Scissors-Lizard-Spock)
+- ![Multi devive mockup](assets/images/mockup-multi-device.png)
+- [Live Website](https://jenns93.github.io/Roc-Paper-Scissors-Lizard-Spock/)
+- [Github Repository](https://github.com/jenns93/Rock-Paper-Scissors-Lizard-Spock)
  # About
 This website has been created for those looking to play the enhanced version of the timeless classic game of rock, paper, scissors. The game is a pure game of chance and is easy to grasp. For those who need further information rules are provided in the index page.
 
@@ -51,7 +51,7 @@ i. As a visitor who has never played this version of the game.
 ### Wireframes
 - The wireframes were created using Mockplus, theses wireframes were followed closely with slight tweaks made for better usability on different screen sizes. Also, the addition of a hidden rule list which has to be clicked to open was added during development as a way for the index page to appear cleaner and less cluttered.
 
-![](/workspace/Rock-Paper-Scissors-Lizard-Spock/assets/images/index-wireframe-pc-tablet.png)
+![](assets/images/game-wireframe-mobile.png)
 - [Wireframes](https://app.mockplus.com/app/OKWZplGhIrf/rp)
 ## Features
 ### Header
@@ -143,9 +143,8 @@ i. As a visitor who has never played this version of the game.
 - Game Page - Pass [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjenns93.github.io%2FRock-Paper-Scissors-Lizard-Spock%2Fgame.html)
 
 ### Javascript Validator
-
+[Validator screenshot](assets/images/jsHint-validator.png)
 - JSHint [weblink](https://jshint.com/)
-- [Screenshot](/workspace/Rock-Paper-Scissors-Lizard-Spock/assets/images/jsHint-validator.png)
 - 1 waring "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (activateButtons, rock, paper, scissors, lizard, spock)"
 - (// jshint esversion: 6) used in jsHint but not added into github code as project criteria states that commented code should be removed.
 
