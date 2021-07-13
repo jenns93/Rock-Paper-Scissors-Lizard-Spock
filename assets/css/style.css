@@ -6,7 +6,7 @@
 }
 body{
   font-family: tourney, sans-serif;
-  background: url("../images/game-background1.jpg")center center / cover black;
+  background: url("../images/game-background.jpg")center center / cover black;
   color: rgb(199, 30, 241);
 }
 h1{

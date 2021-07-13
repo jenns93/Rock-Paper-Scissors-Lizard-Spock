@@ -1,5 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
-	disableButtons();
+	let buttons = document.getElementsByTagName("button");
+	for (let button of buttons) {
+		button.addEventListener("click", function(){
+			if (this.getElementsByTagName("data-type") == "start"){
+				activateButtons();
+			} else if (this.getElementsByTagName("data-type") == "rock"){
+				rock();
+			} else if (this.getElementsByTagName("data-type") == "paper"){
+				paper();
+			} else if (this.getElementsByTagName("data-type") == "scissors"){
+				scissors();
+			} else if (this.getElementsByTagName("data-type") == "lizard"){
+				lizard();
+			} else if (this.getElementsByTagName("data-type") == "spock"){
+				spock();
+			}
+		});
+	}
 });
 
 function disableButtons() {

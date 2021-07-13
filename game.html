@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>ROCK PAPER SCISSORS LIZARD SPOCK</title>
 </head>
-<body>
+<body onload="javascript:disableButtons()">
     <h1 class="heading">ROCK PAPER SCISSORS LIZARD SPOCK</h1>
     <nav>
         <a href="index.html" aria-label="home"><i class="fas fa-home"></i></a>
@@ -34,15 +34,15 @@
         <div id="computer">COM</div>
         <div id="result">Vs</div>
         <div id="user">YOU</div>
-        <button id="play-again" onclick="reset()">Start Game</button>
+        <button id="play-again" onclick="reset()" data-type="start">Start Game</button>
     </div>
     </div>
     <div id="controls">
-        <button id="rock" onclick="rock()"><i class="fas fa-hand-rock"></i></button>
-        <button id="paper" onclick="paper()"><i class="fas fa-hand-paper"></i></button>
-        <button id="scissors" onclick="scissors()"><i class="fas fa-hand-scissors"></i></button>
-        <button id="lizard" onclick="lizard()"><i class="fas fa-hand-lizard"></i></button>
-        <button id="spock" onclick="spock()"><i class="fas fa-hand-spock"></i></button>
+        <button id="rock" onclick="rock()" data-type="rock"><i class="fas fa-hand-rock"></i></button>
+        <button id="paper" onclick="paper()" data-type="paper"><i class="fas fa-hand-paper"></i></button>
+        <button id="scissors" onclick="scissors()" data-type="scissors"><i class="fas fa-hand-scissors"></i></button>
+        <button id="lizard" onclick="lizard()" data-type="lizard"><i class="fas fa-hand-lizard"></i></button>
+        <button id="spock" onclick="spock()" data-type="spock"><i class="fas fa-hand-spock"></i></button>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
