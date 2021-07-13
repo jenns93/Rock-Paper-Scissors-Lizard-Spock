@@ -6,9 +6,8 @@
 }
 body{
   font-family: tourney, sans-serif;
-  background: url("../images/game-background.jpg")center center / cover no-repeat black;
+  background: url("../images/game-background1.jpg")center center / cover black;
   color: rgb(199, 30, 241);
-  height: 100%;
 }
 h1{
   text-align: center;
@@ -253,11 +252,11 @@ nav a{
     line-height: 30px;
   }
   #controls{
-    height: 100%;
+    height: 300px;
   }
   #controls button{
     text-align: center;
-    line-height: 35px;
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 500px){
