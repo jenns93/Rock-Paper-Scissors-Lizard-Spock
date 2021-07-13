@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
 	let buttons = document.getElementsByTagName("button");
 	for (let button of buttons) {
-		button.addEventListener("click", function(){
-			if (this.getElementsByTagName("data-type") == "start"){
+		button.addEventListener("click", function() {
+			if (this.getElementsByTagName("data-type") == "start") {
 				activateButtons();
-			} else if (this.getElementsByTagName("data-type") == "rock"){
+			} else if (this.getElementsByTagName("data-type") == "rock") {
 				rock();
-			} else if (this.getElementsByTagName("data-type") == "paper"){
+			} else if (this.getElementsByTagName("data-type") == "paper") {
 				paper();
-			} else if (this.getElementsByTagName("data-type") == "scissors"){
+			} else if (this.getElementsByTagName("data-type") == "scissors") {
 				scissors();
-			} else if (this.getElementsByTagName("data-type") == "lizard"){
+			} else if (this.getElementsByTagName("data-type") == "lizard") {
 				lizard();
-			} else if (this.getElementsByTagName("data-type") == "spock"){
+			} else if (this.getElementsByTagName("data-type") == "spock") {
 				spock();
 			}
 		});
@@ -142,19 +142,20 @@ function spock() {
 }
 
 function incrementScore() {
-    let wins = document.getElementById("wins");
-    let score = document.getElementById("score");
-    let result = document.getElementById("result");
-    let loses = document.getElementById("loses");
+	let wins = document.getElementById("wins");
+	let score = document.getElementById("score");
+	let result = document.getElementById("result");
+	let loses = document.getElementById("loses");
 	if (result.innerHTML === "Win") {
-		++wins.innerHTML; ++score.innerHTML;
+		++wins.innerHTML;
+		++score.innerHTML;
 		result.style.color = "#1a9e00";
 	} else if (result.innerHTML === "Lose") {
 		--loses.innerHTML;
 		result.style.color = "#dd2214";
 	} else if (result.innerHTML === "Draw") {
 		result.style.color = "rgb(199, 30, 241)";
-	} 
+	}
 }
 
 function levelUp() {
@@ -165,7 +166,7 @@ function levelUp() {
 		++level.innerHTML;
 		console.log(winCondition);
 		document.getElementById("wins").innerHTML = 0;
-	} 
+	}
 }
 
 function reset() {
@@ -192,7 +193,7 @@ function gameOver() {
 		document.getElementById("play-again").innerHTML = "Play Again";
 		playAgain.style.display = "block";
 		disableButtons();
-	} 
+	}
 }
 
 function rules() {

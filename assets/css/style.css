@@ -165,11 +165,15 @@ nav a{
   #game{
     height:800px;
   }
-  h1, nav a, #center-console div, #center-console button,  #left-console div, #right-console h2, #right-console h3, #right-console div, #controls button{
-    font-size: 4rem;
+  h1, nav a, #center-console div, #center-console button,  #left-console div, #right-console h2, #right-console h3, #right-console div{
+    font-size: 5rem;
   }
   #left-console h3{
     padding-top: 50px;
+  }
+  #controls button{
+    font-size: 10rem;
+    height: 100%;
   }
 }
 @media screen and (max-width: 1000px){
@@ -195,7 +199,7 @@ nav a{
     height: 200px;
   }
 }
-@media screen and (max-width: 750px){
+@media screen and (max-width: 800px){
   #game{
     height:180px;
   }
