@@ -1,5 +1,5 @@
 # Rock Paper Scissors Lizard Spock
-![]()
+![Multi devive mockup](/workspace/Rock-Paper-Scissors-Lizard-Spock/assets/images/mockup-multi-device.png)
 [Live Website](https://jenns93.github.io/Roc-Paper-Scissors-Lizard-Spock/)
 [Github Repository](https://github.com/jenns93/Rock-Paper-Scissors-Lizard-Spock)
  # About
@@ -145,6 +145,7 @@ i. As a visitor who has never played this version of the game.
 ### Javascript Validator
 
 - JSHint [weblink](https://jshint.com/)
+- [Screenshot](/workspace/Rock-Paper-Scissors-Lizard-Spock/assets/images/jsHint-validator.png)
 - 1 waring "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (activateButtons, rock, paper, scissors, lizard, spock)"
 - (// jshint esversion: 6) used in jsHint but not added into github code as project criteria states that commented code should be removed.
 
