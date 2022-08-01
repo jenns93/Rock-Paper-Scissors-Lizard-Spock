@@ -46,7 +46,7 @@ nav a{
   font-size: 3rem;
   font-family: tourney, sans-serif;
 }
-#user{
+#user, #play-again:hover, #continue:hover{
   color: rgb(204, 194, 57);
   text-shadow:1px 1px rgb(199, 30, 241);
 }
@@ -60,13 +60,19 @@ nav a{
   line-height: 120px;
   font-size: 2rem;
 }
-#play-again{
+#play-again, #continue{
   background-color: transparent;
   font-size: 3rem;
+  font-family: tourney, sans-serif;
   border-radius: 10px;
   cursor: pointer;
   color: rgb(204, 194, 57);
-  width: 100%;
+  width: 33%;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 33%;
+  height: 30%;
+  text-align: center;
 }
 .level{
   height: 100%;
@@ -76,9 +82,11 @@ nav a{
   font-size: 5rem;
 }
 #controls{
-  height: 200px;
+  height: 100px;
   width: 100%;
+  display: inline-block;
   text-align: center;
+  padding-top: 10px;
 }
 #controls button:disabled{
   color: rgb(204, 194, 57, 0.4);
@@ -90,11 +98,11 @@ nav a{
 #controls button{
   height: 50%;
   width: 15%;
-  margin: 50px 0 50px 4%;
+  margin: 10px;
   border-radius: 20px;
   background-color: transparent;
   color: rgb(204, 194, 57);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family:  tourney, sans-serif;
   cursor: pointer;
 }
@@ -165,14 +173,14 @@ nav a{
   #game{
     height:800px;
   }
-  h1, nav a, #center-console div, #center-console button,  #left-console div, #right-console h2, #right-console h3, #right-console div{
+  h1, nav a, #center-console div, #center-console button,  #left-console div, #right-console h2, #right-console span, #right-console div{
     font-size: 5rem;
   }
   #left-console h3{
     padding-top: 50px;
   }
   #controls button{
-    font-size: 10rem;
+    font-size: 5rem;
     height: 100%;
   }
 }

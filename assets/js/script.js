@@ -161,13 +161,37 @@ function incrementScore() {
 function levelUp() {
 	let level = document.getElementById("level-number");
 	let winCheck = document.getElementById("wins");
+	let Continue = document.getElementById("continue");
+	let scoreCheck = document.getElementById("score");
 	let winCondition = 3;
 	if (parseInt(winCheck.innerHTML) === winCondition) {
 		++level.innerHTML;
 		console.log(winCondition);
-		document.getElementById("wins").innerHTML = 0;
+		document.getElementById('computer').innerHTML = "LEVEL UP";
+		document.getElementById('score').innerHTML = scoreCheck.innerHTML;
+		document.getElementById('continue').innerHTML = "Continue";
+		Continue.style.display = "block";
+		disableButtons();
 	}
 }
+
+function resume() {
+	let Continue = document.getElementById("continue");
+	let levelCheck = document.getElementById("level-number");
+	let loseCheck = document.getElementById("loses");
+	let scoreCheck = document.getElementById("score");
+	document.getElementById('computer').innerHTML = "COM";
+	document.getElementById('result').innerHTML = "Vs";
+	document.getElementById('user').innerHTML = "YOU";
+	document.getElementById('wins').innerHTML = "0";
+	document.getElementById('loses').innerHTML = loseCheck.innerHTML;
+	document.getElementById('score').innerHTML = scoreCheck.innerHTML;
+	document.getElementById('level-number').innerHTML = levelCheck.innerHTML;
+	Continue.style.display = "none";
+	activateButtons();
+}
+
+
 
 function reset() {
 	let playAgain = document.getElementById("play-again");

@@ -16,27 +16,25 @@
         <a href="index.html" aria-label="home"><i class="fas fa-home"></i></a>
     </nav>
     <div id="game">
-    <div id="left-console">
-        <div class="level">
-            <h2>LEVEL</h2>
-            <h3 id="level-number">1</h3>
+        <div id="left-console">
+            <div class="level">
+                <h2>LEVEL</h2>
+                <h3 id="level-number">1</h3>
+            </div>
+        </div>
+        <div id="right-console">
+            <div>Wins: <span id="wins">0</span></div>
+            <div>Lives: <span id="loses">10</span></div>
+            <div>Score: <span id="score">0</span></div>
+        </div>
+        <div id="center-console">
+            <div id="computer">COM</div>
+            <div id="result">Vs</div>
+            <div id="user">YOU</div>
         </div>
     </div>
-    <div id="right-console">
-        <h3>Win:</h3>
-        <div id="wins">0</div>
-        <h3>Lives:</h3>
-        <div id="loses">10</div>
-        <h2>Score:</h2>
-        <div id="score">0</div>
-    </div>
-    <div id="center-console">
-        <div id="computer">COM</div>
-        <div id="result">Vs</div>
-        <div id="user">YOU</div>
-        <button id="play-again" onclick="reset()" data-type="start">Start Game</button>
-    </div>
-    </div>
+    <button id="continue" onclick="resume()" data-type="start">Continue</button>
+    <button id="play-again" onclick="reset()" data-type="start">Start Game</button>
     <div id="controls">
         <button id="rock" onclick="rock()" data-type="rock"><i class="fas fa-hand-rock"></i></button>
         <button id="paper" onclick="paper()" data-type="paper"><i class="fas fa-hand-paper"></i></button>
