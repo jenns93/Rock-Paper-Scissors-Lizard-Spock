@@ -37,7 +37,7 @@ function reply_click(clicked_id) {
 		result.innerHTML = "Win";
 	} else if (choice == myArray[1] && (computer == myArray[0] || computer == myArray[4])) {
 		result.innerHTML = "Win";
-	} else if (choice == myArray[2] && (computer == myArray[1] || computer == myArray[2])) {
+	} else if (choice == myArray[2] && (computer == myArray[1] || computer == myArray[3])) {
 		result.innerHTML = "Win";
 	} else if (choice == myArray[3] && (computer == myArray[1] || computer == myArray[4])) {
 		result.innerHTML = "Win";
@@ -68,16 +68,15 @@ function incrementScore() {
 
 
 function levelUp() {
-	let level = document.getElementById("level-number");
 	let winCheck = document.getElementById("wins");
 	let Continue = document.getElementById("continue");
 	let scoreCheck = document.getElementById("score");
 	let winCondition = 3;
 	if (parseInt(winCheck.innerHTML) === winCondition) {
-		++level.innerHTML;
-		document.getElementById('computer').innerHTML = "LEVEL UP";
+		++document.getElementById("level-number").innerHTML;
+		document.getElementById('level').innerHTML = "LEVEL UP";
 		document.getElementById('score').innerHTML = scoreCheck.innerHTML;
-		document.getElementById('continue').innerHTML = "Continue";
+		Continue.innerHTML = "Continue";
 		Continue.style.display = "block";
 		disableButtons();
 	}
@@ -92,6 +91,7 @@ function resume() {
 	document.getElementById('result').innerHTML = "Vs";
 	document.getElementById('user').innerHTML = "YOU";
 	document.getElementById('wins').innerHTML = "0";
+	document.getElementById('level').innerHTML = "LEVEL";
 	document.getElementById('loses').innerHTML = loseCheck.innerHTML;
 	document.getElementById('score').innerHTML = scoreCheck.innerHTML;
 	document.getElementById('level-number').innerHTML = levelCheck.innerHTML;
@@ -122,7 +122,7 @@ function gameOver() {
 		document.getElementById('computer').innerHTML = "GAME OVER";
 		document.getElementById('result').innerHTML = "SCORE";
 		document.getElementById('user').innerHTML = score.innerHTML;
-		document.getElementById("play-again").innerHTML = "Play Again";
+		playAgain.innerHTML = "Play Again";
 		playAgain.style.display = "block";
 		disableButtons();
 	}
