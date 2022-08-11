@@ -5,141 +5,80 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (this.getElementsByTagName("data-type") == "start") {
 				activateButtons();
 			} else if (this.getElementsByTagName("data-type") == "rock") {
-				rock();
+				reply_click(clicked_id);
 			} else if (this.getElementsByTagName("data-type") == "paper") {
-				paper();
+				reply_click(clicked_id);
 			} else if (this.getElementsByTagName("data-type") == "scissors") {
-				scissors();
+				reply_click(clicked_id);
 			} else if (this.getElementsByTagName("data-type") == "lizard") {
-				lizard();
+				reply_click(clicked_id);
 			} else if (this.getElementsByTagName("data-type") == "spock") {
-				spock();
+				reply_click(clicked_id);
 			}
 		});
 	}
 });
 
 function disableButtons() {
-	document.getElementById("rock").disabled = true;
-	document.getElementById("paper").disabled = true;
-	document.getElementById("scissors").disabled = true;
-	document.getElementById("lizard").disabled = true;
-	document.getElementById("spock").disabled = true;
+	document.querySelectorAll('button.controls').forEach(elem => {
+		elem.disabled = true;
+	});
 }
 
 function activateButtons() {
-	document.getElementById("rock").disabled = false;
-	document.getElementById("paper").disabled = false;
-	document.getElementById("scissors").disabled = false;
-	document.getElementById("lizard").disabled = false;
-	document.getElementById("spock").disabled = false;
+	document.querySelectorAll('button.controls').forEach(elem => {
+		elem.disabled = false;
+	});
 }
 var myArray = ['<i class="fas fa-hand-rock"></i>', '<i class="fas fa-hand-paper"></i>', '<i class="fas fa-hand-scissors"></i>', '<i class="fas fa-hand-lizard"></i>', '<i class="fas fa-hand-spock"></i>'];
 
-function rock() {
+function reply_click(clicked_id) {
 	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
-	let rock = document.getElementById("user");
-	rock.innerHTML = myArray[0];
+	let user = document.getElementById("user");
+	let choice = document.getElementById(clicked_id).innerHTML;
+	user.innerHTML = choice
 	let result = document.getElementById("result");
-	if (computer === myArray[0]) {
+	if (choice === computer) {
 		result.innerHTML = "Draw";
-	} else if (computer === myArray[1]) {
-		result.innerHTML = "Lose";
-	} else if (computer === myArray[2]) {
-		result.innerHTML = "Win";
-	} else if (computer === myArray[3]) {
-		result.innerHTML = "Win";
+	} else if (choice == myArray[0]) {
+		if (computer == myArray[2]||computer == myArray[3]) {
+			result.innerHTML = "Win";
+		} else {
+			result.innerHTML = "Lose";	
+		}	
+	} else if (choice == myArray[1]) {
+		if (computer == myArray[0]||computer == myArray[4]) {
+			result.innerHTML = "Win";
+		} else {
+			result.innerHTML = "Lose";	
+		}	
+	} else if (choice == myArray[2]) {
+		if (computer == myArray[3]||computer == myArray[1]) {
+			result.innerHTML = "Win";
+		} else {
+			result.innerHTML = "Lose";	
+		}	
+	} else if (choice == myArray[3]) {
+		if (computer == myArray[1]||computer == myArray[4]) {
+			result.innerHTML = "Win";
+		} else {
+			result.innerHTML = "Lose";	
+		}	
+	} else if (choice == myArray[4]) {
+		if (computer == myArray[0]||computer == myArray[2]) {
+			result.innerHTML = "Win";
+		} else {
+			result.innerHTML = "Lose";	
+		}	
 	} else {
-		result.innerHTML = "Lose";
+		result.innerHTML = "Lose";	
 	}
+	
 	incrementScore();
 	levelUp();
 	gameOver();
 }
 
-function paper() {
-	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
-	let paper = document.getElementById("user");
-	paper.innerHTML = myArray[1];
-	let result = document.getElementById("result");
-	if (computer === myArray[0]) {
-		result.innerHTML = "Win";
-	} else if (computer === myArray[1]) {
-		result.innerHTML = "Draw";
-	} else if (computer === myArray[2]) {
-		result.innerHTML = "Lose";
-	} else if (computer === myArray[3]) {
-		result.innerHTML = "Lose";
-	} else {
-		result.innerHTML = "Win";
-	}
-	incrementScore();
-	levelUp();
-	gameOver();
-}
-
-function scissors() {
-	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
-	let scissors = document.getElementById("user");
-	scissors.innerHTML = myArray[2];
-	let result = document.getElementById("result");
-	if (computer === myArray[0]) {
-		result.innerHTML = "Lose";
-	} else if (computer === myArray[1]) {
-		result.innerHTML = "Win";
-	} else if (computer === myArray[2]) {
-		result.innerHTML = "Draw";
-	} else if (computer === myArray[3]) {
-		result.innerHTML = "Win";
-	} else {
-		result.innerHTML = "Lose";
-	}
-	incrementScore();
-	levelUp();
-	gameOver();
-}
-
-function lizard() {
-	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
-	let lizard = document.getElementById("user");
-	lizard.innerHTML = myArray[3];
-	let result = document.getElementById("result");
-	if (computer === myArray[0]) {
-		result.innerHTML = "Lose";
-	} else if (computer === myArray[1]) {
-		result.innerHTML = "Win";
-	} else if (computer === myArray[2]) {
-		result.innerHTML = "Lose";
-	} else if (computer === myArray[3]) {
-		result.innerHTML = "Draw";
-	} else {
-		result.innerHTML = "Win";
-	}
-	incrementScore();
-	levelUp();
-	gameOver();
-}
-
-function spock() {
-	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
-	let spock = document.getElementById("user");
-	spock.innerHTML = myArray[4];
-	let result = document.getElementById("result");
-	if (computer === myArray[0]) {
-		result.innerHTML = "Win";
-	} else if (computer === myArray[1]) {
-		result.innerHTML = "Lose";
-	} else if (computer === myArray[2]) {
-		result.innerHTML = "Win";
-	} else if (computer === myArray[3]) {
-		result.innerHTML = "Lose";
-	} else {
-		result.innerHTML = "Draw";
-	}
-	incrementScore();
-	levelUp();
-	gameOver();
-}
 
 function incrementScore() {
 	let wins = document.getElementById("wins");

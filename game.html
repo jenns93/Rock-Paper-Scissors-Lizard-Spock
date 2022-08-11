@@ -36,11 +36,11 @@
     <button id="continue" onclick="resume()" data-type="start">Continue</button>
     <button id="play-again" onclick="reset()" data-type="start">Start Game</button>
     <div id="controls">
-        <button id="rock" onclick="rock()" data-type="rock"><i class="fas fa-hand-rock"></i></button>
-        <button id="paper" onclick="paper()" data-type="paper"><i class="fas fa-hand-paper"></i></button>
-        <button id="scissors" onclick="scissors()" data-type="scissors"><i class="fas fa-hand-scissors"></i></button>
-        <button id="lizard" onclick="lizard()" data-type="lizard"><i class="fas fa-hand-lizard"></i></button>
-        <button id="spock" onclick="spock()" data-type="spock"><i class="fas fa-hand-spock"></i></button>
+        <button id="rock" class="controls" onclick="reply_click(this.id)" data-type="rock"><i class="fas fa-hand-rock"></i></button>
+        <button id="paper" class="controls" onclick="reply_click(this.id)" data-type="paper"><i class="fas fa-hand-paper"></i></button>
+        <button id="scissors" class="controls" onclick="reply_click(this.id)" data-type="scissors"><i class="fas fa-hand-scissors"></i></button>
+        <button id="lizard" class="controls" onclick="reply_click(this.id)" data-type="lizard"><i class="fas fa-hand-lizard"></i></button>
+        <button id="spock" class="controls" onclick="reply_click(this.id)" data-type="spock"><i class="fas fa-hand-spock"></i></button>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
