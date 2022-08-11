@@ -4,15 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		button.addEventListener("click", function() {
 			if (this.getElementsByTagName("data-type") == "start") {
 				activateButtons();
-			} else if (this.getElementsByTagName("data-type") == "rock") {
-				reply_click(clicked_id);
-			} else if (this.getElementsByTagName("data-type") == "paper") {
-				reply_click(clicked_id);
-			} else if (this.getElementsByTagName("data-type") == "scissors") {
-				reply_click(clicked_id);
-			} else if (this.getElementsByTagName("data-type") == "lizard") {
-				reply_click(clicked_id);
-			} else if (this.getElementsByTagName("data-type") == "spock") {
+			} else {
 				reply_click(clicked_id);
 			}
 		});
@@ -38,64 +30,42 @@ function reply_click(clicked_id) {
 	let choice = document.getElementById(clicked_id).innerHTML;
 	user.innerHTML = choice
 	let result = document.getElementById("result");
+	
 	if (choice === computer) {
 		result.innerHTML = "Draw";
-	} else if (choice == myArray[0]) {
-		if (computer == myArray[2]||computer == myArray[3]) {
-			result.innerHTML = "Win";
-		} else {
-			result.innerHTML = "Lose";	
-		}	
-	} else if (choice == myArray[1]) {
-		if (computer == myArray[0]||computer == myArray[4]) {
-			result.innerHTML = "Win";
-		} else {
-			result.innerHTML = "Lose";	
-		}	
-	} else if (choice == myArray[2]) {
-		if (computer == myArray[3]||computer == myArray[1]) {
-			result.innerHTML = "Win";
-		} else {
-			result.innerHTML = "Lose";	
-		}	
-	} else if (choice == myArray[3]) {
-		if (computer == myArray[1]||computer == myArray[4]) {
-			result.innerHTML = "Win";
-		} else {
-			result.innerHTML = "Lose";	
-		}	
-	} else if (choice == myArray[4]) {
-		if (computer == myArray[0]||computer == myArray[2]) {
-			result.innerHTML = "Win";
-		} else {
-			result.innerHTML = "Lose";	
-		}	
+	} else if (choice == myArray[0] && (computer == myArray[2] || computer == myArray[3])) {
+		result.innerHTML = "Win";
+	} else if (choice == myArray[1] && (computer == myArray[0] || computer == myArray[4])) {
+		result.innerHTML = "Win";
+	} else if (choice == myArray[2] && (computer == myArray[1] || computer == myArray[2])) {
+		result.innerHTML = "Win";
+	} else if (choice == myArray[3] && (computer == myArray[1] || computer == myArray[4])) {
+		result.innerHTML = "Win";
+	} else if (choice == myArray[4] && (computer == myArray[0] || computer == myArray[2])) {
+		result.innerHTML = "Win";
 	} else {
 		result.innerHTML = "Lose";	
 	}
-	
-	incrementScore();
+	incrementScore()
 	levelUp();
 	gameOver();
 }
 
 
 function incrementScore() {
-	let wins = document.getElementById("wins");
-	let score = document.getElementById("score");
 	let result = document.getElementById("result");
-	let loses = document.getElementById("loses");
 	if (result.innerHTML === "Win") {
-		++wins.innerHTML;
-		++score.innerHTML;
+		++document.getElementById("wins").innerHTML;
+		++document.getElementById("score").innerHTML;
 		result.style.color = "#1a9e00";
 	} else if (result.innerHTML === "Lose") {
-		--loses.innerHTML;
+		--document.getElementById("loses").innerHTML;
 		result.style.color = "#dd2214";
-	} else if (result.innerHTML === "Draw") {
+	} else {
 		result.style.color = "rgb(199, 30, 241)";
 	}
 }
+
 
 function levelUp() {
 	let level = document.getElementById("level-number");
@@ -105,7 +75,6 @@ function levelUp() {
 	let winCondition = 3;
 	if (parseInt(winCheck.innerHTML) === winCondition) {
 		++level.innerHTML;
-		console.log(winCondition);
 		document.getElementById('computer').innerHTML = "LEVEL UP";
 		document.getElementById('score').innerHTML = scoreCheck.innerHTML;
 		document.getElementById('continue').innerHTML = "Continue";
