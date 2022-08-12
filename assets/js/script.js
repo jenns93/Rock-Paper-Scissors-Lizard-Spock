@@ -87,11 +87,7 @@ function resume() {
 	let levelCheck = document.getElementById("level-number");
 	let loseCheck = document.getElementById("loses");
 	let scoreCheck = document.getElementById("score");
-	document.getElementById('computer').innerHTML = "COM";
-	document.getElementById('result').innerHTML = "Vs";
-	document.getElementById('user').innerHTML = "YOU";
-	document.getElementById('wins').innerHTML = "0";
-	document.getElementById('level').innerHTML = "LEVEL";
+	textReset();
 	document.getElementById('loses').innerHTML = loseCheck.innerHTML;
 	document.getElementById('score').innerHTML = scoreCheck.innerHTML;
 	document.getElementById('level-number').innerHTML = levelCheck.innerHTML;
@@ -99,18 +95,20 @@ function resume() {
 	activateButtons();
 }
 
-
-
-function reset() {
-	let playAgain = document.getElementById("play-again");
+function textReset(){
 	document.getElementById('computer').innerHTML = "COM";
 	document.getElementById('result').innerHTML = "Vs";
 	document.getElementById('user').innerHTML = "YOU";
 	document.getElementById('wins').innerHTML = "0";
+	document.getElementById('level').innerHTML = "LEVEL";
+}
+
+function reset() {
 	document.getElementById('loses').innerHTML = "10";
 	document.getElementById('score').innerHTML = "0";
 	document.getElementById('level-number').innerHTML = "1";
-	playAgain.style.display = "none";
+	textReset();
+	document.getElementById("play-again").style.display = "none";
 	activateButtons();
 }
 
@@ -121,7 +119,9 @@ function gameOver() {
 	if (loseCheck.innerHTML < 1) {
 		document.getElementById('computer').innerHTML = "GAME OVER";
 		document.getElementById('result').innerHTML = "SCORE";
+		document.getElementById('wins').innerHTML = "0";
 		document.getElementById('user').innerHTML = score.innerHTML;
+		score.innerHTML = "0"
 		playAgain.innerHTML = "Play Again";
 		playAgain.style.display = "block";
 		disableButtons();
