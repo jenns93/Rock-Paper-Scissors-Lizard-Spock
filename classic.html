@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Tourney:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>ROCK PAPER SCISSORS LIZARD SPOCK</title>
+</head>
+<body onload="javascript:disableButtons()">
+    <h1 class="heading">ROCK PAPER SCISSORS Classic</h1>
+    <nav>
+        <a href="index.html" aria-label="home"><i class="fas fa-home"></i></a>
+    </nav>
+    <div id="game">
+        <div id="left-console">
+            <div class="level">
+                <h2 id="level">LEVEL</h2>
+                <h3 id="level-number">1</h3>
+            </div>
+        </div>
+        <div id="right-console">
+            <div>Wins: <span id="wins">0</span></div>
+            <div>Lives: <span id="loses">10</span></div>
+            <div>Score: <span id="score">0</span></div>
+        </div>
+        <div id="center-console">
+            <div id="computer">COM</div>
+            <div id="result">Vs</div>
+            <div id="user">YOU</div>
+        </div>
+    </div>
+    <button id="continue" onclick="resume()" data-type="classic"></button>
+    <button id="play-again" onclick="reset()" data-type="classic">Start Game</button>
+    <div id="controls">
+        <button id="rock" class="controls" onclick="reply_classic(this.id)" data-type="rock"><i class="fas fa-hand-rock"></i></button>
+        <button id="paper" class="controls" onclick="reply_classic(this.id)" data-type="paper"><i class="fas fa-hand-paper"></i></button>
+        <button id="scissors" class="controls" onclick="reply_classic(this.id)" data-type="scissors"><i class="fas fa-hand-scissors"></i></button>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

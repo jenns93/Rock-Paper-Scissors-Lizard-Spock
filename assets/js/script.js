@@ -23,7 +23,7 @@ function activateButtons() {
 	});
 }
 var myArray = ['<i class="fas fa-hand-rock"></i>', '<i class="fas fa-hand-paper"></i>', '<i class="fas fa-hand-scissors"></i>', '<i class="fas fa-hand-lizard"></i>', '<i class="fas fa-hand-spock"></i>'];
-
+var classicArray = ['<i class="fas fa-hand-rock"></i>', '<i class="fas fa-hand-paper"></i>', '<i class="fas fa-hand-scissors"></i>']
 function reply_click(clicked_id) {
 	let computer = document.getElementById("computer").innerHTML = myArray[Math.floor(Math.random() * myArray.length)];
 	let user = document.getElementById("user");
@@ -42,6 +42,29 @@ function reply_click(clicked_id) {
 	} else if (choice == myArray[3] && (computer == myArray[1] || computer == myArray[4])) {
 		result.innerHTML = "Win";
 	} else if (choice == myArray[4] && (computer == myArray[0] || computer == myArray[2])) {
+		result.innerHTML = "Win";
+	} else {
+		result.innerHTML = "Lose";	
+	}
+	incrementScore()
+	levelUp();
+	gameOver();
+}
+
+function reply_classic(clicked_id) {
+	let computer = document.getElementById("computer").innerHTML = classicArray[Math.floor(Math.random() * classicArray.length)];
+	let user = document.getElementById("user");
+	let choice = document.getElementById(clicked_id).innerHTML;
+	user.innerHTML = choice
+	let result = document.getElementById("result");
+	
+	if (choice === computer) {
+		result.innerHTML = "Draw";
+	} else if (choice == myArray[0] && (computer == myArray[2])) {
+		result.innerHTML = "Win";
+	} else if (choice == myArray[1] && (computer == myArray[0])) {
+		result.innerHTML = "Win";
+	} else if (choice == myArray[2] && (computer == myArray[1])) {
 		result.innerHTML = "Win";
 	} else {
 		result.innerHTML = "Lose";	
